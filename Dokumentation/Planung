@@ -1,0 +1,191 @@
+
+
+Problemvorstellung (Wordle)
+
+
+##### Initial Insight / Problem / Statement of Work
+
+
+Es soll ein **Wordle-Spiel** entwickelt werden, das **korrekt**, **verständlich** und **regelkonform** funktioniert.
+
+  
+##### What is the nature of the problem?
+
+
+Das Problem ist ein **Logik- und Regelproblem**.
+
+Eingaben müssen geprüft werden und das Spiel muss nach jedem Versuch **richtiges Feedback** geben, auch bei **doppelten Buchstaben
+
+  
+##### What is?
+
+  
+Der Spieler errät ein **Wort mit fünf Buchstaben** in **maximal sechs Versuchen**.
+
+Nach jedem Versuch werden die Buchstaben als **richtig**, **falsche Position** oder **nicht enthalten** bewertet.
+
+  
+
+##### Which problem can we impact the most?
+
+  
+Der grösste Einfluss liegt in der **korrekten Bewertungslogik**.
+
+Der grösste Einfluss liegt dort, weil:
+
+- Wenn die Bewertung **falsch** ist, fühlt sich das Spiel **unfair** an
+    
+- Wenn sie **richtig** ist, fühlt sich das Spiel **wie echtes Wordle** an
+    
+
+---
+
+
+Einfaches Beispiel 
+
+
+Zielwort: **APFEL**
+
+Eingabe: **ALLEE**
+
+  
+Das Spiel muss:
+
+- **A** → richtig, richtige Position ✅
+    
+- **L** → nur **einmal** als richtig zählen ❗
+    
+- **E** → richtig, aber **nicht doppelt bewerten**
+
+Besonders wichtig sind **doppelte Buchstaben** und **ungültige Eingaben**.
+
+  
+
+##### What if?
+
+  
+Das Problem kann gelöst werden durch:
+
+- klare Spielregeln
+    
+- eine saubere Bewertungslogik
+    
+- verständliche Rückmeldungen für den Spieler
+
+
+
+
+### MindMap 
+dfhsjdkfjds
+
+
+
+nmnmnm
+
+
+
+
+
+
+### App Design  
+
+src/
+ ├── Main.java
+ ├── WordleGame.java
+ ├── WordValidator.java
+ ├── GuessResult.java
+ ├── WordList.java
+ └── ui/
+     ├── ConsoleUI.java
+     └── JavaFXUI.java
+
+##### Main.java
+
+**Was Wer macht:** 
+>Enthält die main-Methode
+   Startet das Spiel
+
+
+##### WordleGame.java
+
+➡️ Steuert den gesamten Spielablauf.
+
+**Macht**
+
+>Wählt das geheime Wort
+Zählt die Versuche (max. 6)
+Startet und beendet das Spiel
+Entscheidet: gewonnen oder verloren
+Verbindet alle anderen Klassen
+
+
+##### Wordle Validator.java 
+
+**Macht**
+
+>Prüft Wortlänge
+>Prüft, ob das Wort in der Wortliste ist
+
+
+
+##### GuessResult.java
+
+➡️ Vergleicht geratenes Wort mit dem geheimen Wort.
+
+**Macht**
+
+- Prüft jeden Buchstaben
+    
+- Gibt zurück:
+    
+    - richtig & richtige Position
+        
+    - richtig & falsche Position
+        
+    - nicht im Wort
+
+
+
+##### WordList.java
+
+**Aufgabe:**
+
+➡️ Verwaltet alle gültigen Wörter.
+
+  
+**Macht**
+
+- Speichert die Wortliste
+    
+- Wählt ein zufälliges geheimes Wort
+    
+- Prüft, ob ein Wort existiert
+
+
+
+##### UI
+
+**Aufgabe:**
+
+➡️ Kommunikation mit dem Spieler.
+
+
+**Macht**
+
+- Liest Benutzereingaben
+    
+- Zeigt Ergebnisse an
+    
+
+  
+
+**Macht NICHT**
+
+- Spiellogik
+    
+- Wortprüfung
+    
+- Buchstabenvergleich
+
+ 
+
