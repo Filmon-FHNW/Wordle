@@ -6,36 +6,36 @@ Problemvorstellung (Wordle)
 ##### Initial Insight / Problem / Statement of Work
 
 
-Es soll ein **Wordle-Spiel** entwickelt werden, das **korrekt**, **verständlich** und **regelkonform** funktioniert.
+Es soll ein Wordle Spiel entwickelt werden, das korrekt, verständlich und regelkonform funktioniert.
 
   
 ##### What is the nature of the problem?
 
 
-Das Problem ist ein **Logik- und Regelproblem**.
+Das Problem ist ein Logik und Regelproblem.
 
-Eingaben müssen geprüft werden und das Spiel muss nach jedem Versuch **richtiges Feedback** geben, auch bei **doppelten Buchstaben
+Eingaben müssen geprüft werden und das Spiel muss nach jedem Versuch richtiges Feedback geben, auch bei doppelten Buchstaben
 
   
 ##### What is?
 
   
-Der Spieler errät ein **Wort mit fünf Buchstaben** in **maximal sechs Versuchen**.
+Der Spieler errät ein Wort mit fünf Buchstaben in maximal sechs Versuchen.
 
-Nach jedem Versuch werden die Buchstaben als **richtig**, **falsche Position** oder **nicht enthalten** bewertet.
+Nach jedem Versuch werden die Buchstaben als richtig, falsche Position oder nicht enthalten bewertet.
 
   
 
 ##### Which problem can we impact the most?
 
   
-Der grösste Einfluss liegt in der **korrekten Bewertungslogik**.
+Der grösste Einfluss liegt in der korrekten Bewertungslogik.
 
 Der grösste Einfluss liegt dort, weil:
 
-- Wenn die Bewertung **falsch** ist, fühlt sich das Spiel **unfair** an
+- Wenn die Bewertung falsch ist, fühlt sich das Spiel unfair an
     
-- Wenn sie **richtig** ist, fühlt sich das Spiel **wie echtes Wordle** an
+- Wenn sie richtig ist, fühlt sich das Spiel wie echtes Wordle an
     
 
 ---
@@ -44,20 +44,20 @@ Der grösste Einfluss liegt dort, weil:
 Einfaches Beispiel 
 
 
-Zielwort: **APFEL**
+Zielwort: APFEL
 
-Eingabe: **ALLEE**
+Eingabe: ALLEE
 
   
 Das Spiel muss:
 
-- **A** → richtig, richtige Position ✅
+- A → richtig, richtige Position ✅
     
-- **L** → nur **einmal** als richtig zählen ❗
+- L → nur einmal als richtig zählen ❗
     
-- **E** → richtig, aber **nicht doppelt bewerten**
+- E → richtig, aber nicht doppelt bewerten
 
-Besonders wichtig sind **doppelte Buchstaben** und **ungültige Eingaben**.
+Besonders wichtig sind doppelte Buchstaben und ungültige Eingaben.
 
   
 
@@ -76,15 +76,6 @@ Das Problem kann gelöst werden durch:
 
 
 ### MindMap 
-dfhsjdkfjds
-
-
-
-nmnmnm
-
-
-
-
 
 
 ### App Design  
@@ -101,8 +92,9 @@ src/
 
 ##### Main.java
 
-**Was Wer macht:** 
->Enthält die main-Methode
+Was Wer macht: 
+
+>Enthält die main Methode
    Startet das Spiel
 
 
@@ -110,7 +102,7 @@ src/
 
 ➡️ Steuert den gesamten Spielablauf.
 
-**Macht**
+Macht
 
 >Wählt das geheime Wort
 Zählt die Versuche (max. 6)
@@ -121,7 +113,7 @@ Verbindet alle anderen Klassen
 
 ##### Wordle Validator.java 
 
-**Macht**
+Macht
 
 >Prüft Wortlänge
 >Prüft, ob das Wort in der Wortliste ist
@@ -132,7 +124,7 @@ Verbindet alle anderen Klassen
 
 ➡️ Vergleicht geratenes Wort mit dem geheimen Wort.
 
-**Macht**
+Macht
 
 - Prüft jeden Buchstaben
     
@@ -148,12 +140,12 @@ Verbindet alle anderen Klassen
 
 ##### WordList.java
 
-**Aufgabe:**
+Aufgabe:
 
 ➡️ Verwaltet alle gültigen Wörter.
 
   
-**Macht**
+Macht
 
 - Speichert die Wortliste
     
@@ -165,12 +157,12 @@ Verbindet alle anderen Klassen
 
 ##### UI
 
-**Aufgabe:**
+Aufgabe:
 
 ➡️ Kommunikation mit dem Spieler.
 
 
-**Macht**
+Macht
 
 - Liest Benutzereingaben
     
@@ -179,7 +171,7 @@ Verbindet alle anderen Klassen
 
   
 
-**Macht NICHT**
+Macht NICHT
 
 - Spiellogik
     
