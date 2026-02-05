@@ -2,10 +2,10 @@ package WordlePackage;
 
 public class GuessResult {
 
-    // Wort das der Spieler geraten hat
+    // Wort der Spieler geraten hat
     private String guess;
 
-    //  Feedback für jeden Buchstaben
+    //  Feedback jeden Buchstaben
     private char[] feedback;
 
     // konstruktor
@@ -14,7 +14,7 @@ public class GuessResult {
         this.feedback = new char[5];
     }
 
-    // Setze Feedback für eine Position
+    // Setze Feedback eine Position
     public void setFeedback(int position, char status) {
         feedback[position] = status;
     }
